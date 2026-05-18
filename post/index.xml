@@ -84,6 +84,89 @@
 </description>
         </item>
         <item>
+        <title>MMD制作-模型预处理与常用主渲的使用方法</title>
+        <link>http://localhost:1313/p/mmd_i/</link>
+        <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/mmd_i/</guid>
+        <description>&lt;img src="http://localhost:1313/p/mmd_i/1.png" alt="Featured image of post MMD制作-模型预处理与常用主渲的使用方法" /&gt;&lt;p&gt;地面影跟抗锯齿记得关（如果渲室外的话不关地面影也行……？但后期好像会有一些小问题比如影子太浅了）&lt;/p&gt;
+&lt;h2 id=&#34;模型预处理&#34;&gt;模型预处理
+&lt;/h2&gt;&lt;p&gt;把脸复制一份，只选中原来的脸，打开法线，选中，点法线球面化插件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数值：崩铁成男：x 0 y 20.8 z 0.4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;运行，完成后同时选中原来的和复制的，编辑→法线编辑→平均化顶点附近的法线（应该是第二个？？小数点后8个0）&lt;/p&gt;
+&lt;p&gt;头发同脸，偷懒可以球心直接用脸的&lt;/p&gt;
+&lt;p&gt;复制的材质可以删了，还要继续处理就是法线平面化（数值10%差不多）&lt;/p&gt;
+&lt;h2 id=&#34;常用主渲的使用方法&#34;&gt;常用主渲的使用方法
+&lt;/h2&gt;&lt;h3 id=&#34;ray渲&#34;&gt;ray渲
+&lt;/h3&gt;&lt;p&gt;☛载入人物场景天空盒上完main跟envlight就上toon（人物，整体的，我觉得azolt的最好用）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;关于人物上toon后脸的一些问题：不够2d记得在pe里法线平面化；如果还有诡异阴影，ssao map里面给人物脸的ssao设成0&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;☛dippen最好现在就上吧，只给人物上，&lt;del&gt;也可以上croquis&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;☛autoluminous一定要早放！第一个！用三金的almap指定发光物体和颜色；basic调不了x的值形成光束，但基础发光还是可以的，可以用在想让不同的物体亮度不一样。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;想要会发光的物体停止自发光，先拖lightsampling.x，再在mme里面给材质附blackmask&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;☛然后就是workingfloor！（还有water这些地板类的）不然后面会出问题，，上完这些就开始库库打光&lt;/p&gt;
+&lt;p&gt;☛先上地面雾，平行光提亮（感觉地面雾可有可无，看情况吧）&lt;/p&gt;
+&lt;p&gt;☛然后改材质（背景人物）（人物只上toon也行，给脸上toonface似乎会让他强制变成一个偏肉的颜色） 脸部阴影如果有那种很3d的阴影的话，在ssaomap把脸的ssao设为0试试&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;不是很会改材质（）ray我以打光为主&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;☛三金佬改的雾气灯，要在fog栏附上相应fx文件；如果不显示光线的话就不用 记得如果人物不受光源影响要在mme里面打叉叉or附上mask_off&lt;/p&gt;
+&lt;p&gt;☛雾气可以用来压暗背景，注意main栏把雾气给取消了，不然有亮亮的圆球（如果还有那就其他栏取消取消试试（）&lt;/p&gt;
+&lt;p&gt;☛吳石的tnpostpointlight可以用来提亮人物，好用&lt;/p&gt;
+&lt;p&gt;☛然后渲人物，上边缘光（可以prltoon跟三金的一起上）、postalphaeye、前发影（邪修前发影可以用来做脖子阴影）（苍月模型不需要他自带脖子阴影）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;还有一个邪修，在pe里分离下巴材质，然后上前发影，就能下巴脖子都有阴影了（且不受光影响），缺点是分离出来的下巴会有点黑色边缘线，本人目前不知道如何解决，但渲染完之后其实不仔细看看不出来&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;☛然后开叠滤镜，ikdiffusion1（x值表示色散度，正负都可，只代表方向，si泛光强度，tr与画面的融合度，tr越小，画面越暗）、msvigetting（可以给全局色散的cheaplens）、然后泛光（就用lightbloom别拉太高也行，ikdiffusion已经有泛光了，指定泛光物体的话用三金的）、msnoise噪点，其他一些有意思的/风格化的mme放下面说&lt;/p&gt;
+&lt;p&gt;☛然后调色，mscolorcorrection、nbHSV等等以及滤镜（ikclut-rc、likelooks等还有一些风格化滤镜）；加animescreen或者iksunshaft（这个就是比ascreen更强力的大光，但记得要把附件栏“影”打勾）&lt;/p&gt;
+&lt;p&gt;☛加景深，x文件绑模型头部，c开头的能有个色散效果，记得调高cot什么的还有一个玉米什么的，可以强调背景的光，很好康；三金佬的可以指定物体景深&lt;/p&gt;
+&lt;p&gt;☛加运动模糊（一般si0.5差不多？但这个有点吃性能带不动就别放了），fxaa&lt;/p&gt;
+&lt;p&gt;☛加飘落粒子（其实前面加也行，但感觉最后放不容易错一点），按readme里面做，用a佬的可以有六边形粒子的效果，三金改的还能色彩偏移，会产生多种不同色的粒子，好康！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;也可以先放粒子再景深，好看看效果，景深嫌烦直接前boke拉到1（就是摄像头距离内都不模糊），不嫌烦可以根据镜头k&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于ray材质可见b站教程&lt;/p&gt;
+&lt;h3 id=&#34;ps渲&#34;&gt;ps渲
+&lt;/h3&gt;&lt;p&gt;☛先载入控制器，载入main或main_toon（可以人物toon/人物toon头发main，场景main）&lt;/p&gt;
+&lt;p&gt;☛调节影范围，直到光影不再出现明显二分，照明也可以自行调&lt;/p&gt;
+&lt;p&gt;☛调控制器&lt;/p&gt;
+&lt;p&gt;☛workingfloor或者water啥的加一下&lt;/p&gt;
+&lt;p&gt;☛有需要的话可以加个聚光灯hgSpotlight，直接拖pmx。这个可以生成人物在墙壁上的投影（阴影），好用！要体积光在“疑似”（乱码了反正名字最短的文件夹）里面的最长的文件夹里的FVL_Obj拖pmx，绘制顺序紧跟hgSpotlight，再拖FakeVolumeLight.x就OK了，hg的控制器里调参数。&lt;/p&gt;
+&lt;p&gt;☛lightbloom（ps：要用dirty的话得载入带dirtymap的那个，调一下控制器就会出现六边形的粒子一样的，很好康，可以拉一下bloomcolor4v+跟5v+），mspowerdiffusion（黑点拉一下，白点拉高，透明度拉一下，扩散拉高，其实也就这几个怎么好看怎么拉吧反正）&lt;/p&gt;
+&lt;p&gt;☛exshadowSSAO，excellentshadow（这俩都在excellentshadow2文件夹），excellentshadow：Rx区间-100到100，影响阴影模糊度，si区间01，越小阴影越淡，越散。tr调阴影亮暗&lt;/p&gt;
+&lt;p&gt;☛ikdiffusion等滤镜跟调色同ray渲&lt;/p&gt;
+&lt;p&gt;☛空气远近很好用，类似于ray里的雾气，si调大小，xyz是位置（一般只动z就可以了），si是强度。这个得早点放。&lt;del&gt;但我的空气远近好像有bug用不了。&lt;/del&gt;&lt;/p&gt;
+&lt;h3 id=&#34;patoon渲&#34;&gt;patoon渲
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;给人物上patoon倾向色无，眉睫上标准&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;载入控制器，调节大小能覆盖人物，外部亲绑人物center&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自行调节&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在patoon中使用固定面影：&lt;/p&gt;
+&lt;p&gt;贴图同mstc，在fx文件中取消注释，添加贴图路径。（想要面部无其他投影，如头发跟手的投影那就用浓目，想要就用倾向色无&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mstc渲&#34;&gt;mstc渲
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;拖msToonCoordinatorController.pmx 跟Shade.x。拖default_v2.vmd&lt;/li&gt;
+&lt;li&gt;MMEeffect（后简称ME）拖给人物main→SimplePaint_EdgeOff&lt;/li&gt;
+&lt;li&gt;拖ExcellentShadow.x。ME里面main栏取消打钩。 ps：有场景的话（其他主渲）要把excellentshadow附带的所有栏给场景取消打钩&lt;/li&gt;
+&lt;li&gt;在mstc_shadeRT里面，给人物各部位附上前面所修改的fx文件。调整阴影距离（800-1200左右）&lt;/li&gt;
+&lt;li&gt;载入edge，跟croquis（附件操作xyz改成1，si为描边粗细，tr为描边浓度）&lt;/li&gt;
+&lt;li&gt;在mstccontroller里面调整表情操作，调出心仪的阴影叭！&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>Chinese Test</title>
         <link>http://localhost:1313/p/test-chinese/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
