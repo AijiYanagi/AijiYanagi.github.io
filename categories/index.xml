@@ -7,7 +7,31 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>雾沉@Aiji0729</copyright>
-        <lastBuildDate>Sun, 17 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>崩坏：星穹铁道</title>
+        <link>http://localhost:1313/categories/%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/</link>
+        <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E5%B4%A9%E5%9D%8F%E6%98%9F%E7%A9%B9%E9%93%81%E9%81%93/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>任务拆解</title>
+        <link>http://localhost:1313/categories/%E4%BB%BB%E5%8A%A1%E6%8B%86%E8%A7%A3/</link>
+        <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E4%BB%BB%E5%8A%A1%E6%8B%86%E8%A7%A3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>终末地</title>
+        <link>http://localhost:1313/categories/%E7%BB%88%E6%9C%AB%E5%9C%B0/</link>
+        <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E7%BB%88%E6%9C%AB%E5%9C%B0/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>RPG</title>
         <link>http://localhost:1313/categories/rpg/</link>
         <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
@@ -21,6 +45,22 @@
         <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/%E6%B8%B8%E6%88%8F%E8%AE%B0%E5%BD%95/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>任务设计</title>
+        <link>http://localhost:1313/categories/%E4%BB%BB%E5%8A%A1%E8%AE%BE%E8%AE%A1/</link>
+        <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E4%BB%BB%E5%8A%A1%E8%AE%BE%E8%AE%A1/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>学习心得</title>
+        <link>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/</link>
+        <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/</guid>
         <description></description>
         </item>
         <item>
@@ -42,18 +82,10 @@
         <item>
         <title>Test</title>
         <link>http://localhost:1313/categories/test/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>http://localhost:1313/categories/test/</guid>
         <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
-        </item>
-        <item>
-        <title>测试</title>
-        <link>http://localhost:1313/categories/%E6%B5%8B%E8%AF%95/</link>
-        <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/categories/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
         </item>
         
     </channel>
